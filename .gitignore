@@ -3,7 +3,9 @@
 
 /workspace.xml
 # Datasource local storage ignored files
-/venv
+/venv/Scripts
+/venv/Lib
+/venv/Include
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/

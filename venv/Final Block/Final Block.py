@@ -69,6 +69,7 @@ while True:
             for c in mylist:
                 x, y, w, h = c
 
+
                 centercolor = obj[y + h // 2, x + w // 2]
                 # print(centercolor)
                 if list(centercolor) != [0, 0, 0]:
