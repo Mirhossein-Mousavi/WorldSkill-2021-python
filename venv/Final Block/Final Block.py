@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import imutils as imu
 
 # ---------------------------------------------------------------------
 
@@ -16,6 +17,9 @@ def Brush(event, x, y, flags, param):
         print(f"Color:    {image[y, x]} ")
         print("---------------------------")
 
+        lower=(150,150,150)
+        upper=(255,255,255)
+
         if lower is not None:
             b, g, r = lower
             b1, g1, r1 = image[y, x]
@@ -26,6 +30,7 @@ def Brush(event, x, y, flags, param):
             if r1 < r:
                 r = r1
             lower = np.array([b, g, r])
+
 
             b, g, r = upper
             b1, g1, r1 = image[y, x]
@@ -44,11 +49,13 @@ def Brush(event, x, y, flags, param):
 
 
 # ---------------------------------------------------------------------
+
 cam = cv2.VideoCapture(0)
 while True:
 
     _, image = cam.read()
     image = cv2.medianBlur(image, 9)
+    # image = imu.resize(image,300,400)
 
     if lower is not None:
         mask = cv2.inRange(image, lower, upper)
@@ -61,6 +68,9 @@ while True:
         cnts = cv2.findContours(gray, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
         cnts = cnts[0] if len(cnts) == 2 else cnts[1]
         mylist = []
+        Xs = []
+        Ys = []
+        items = []
         for c in list(cnts):
             x, y, w, h = cv2.boundingRect(c)
             if h < 25 or w < 25: continue
@@ -68,15 +78,21 @@ while True:
         if len(mylist) == 25:
             for c in mylist:
                 x, y, w, h = c
-
-
+                Xs = [num[0] for num in sorted(sorted(mylist, key=lambda n: n[1])[:5], key=lambda n: n[0])]
+                Ys = [num[1] for num in sorted(sorted(mylist, key=lambda n: n[0])[:5], key=lambda n: n[1])]
                 centercolor = obj[y + h // 2, x + w // 2]
                 # print(centercolor)
                 if list(centercolor) != [0, 0, 0]:
                     if centercolor[1] > centercolor[0]:
+                        difx = [abs(num - x) for num in Xs]
+                        dify = [abs(num - y) for num in Ys]
+                        items.append([difx.index(min(difx)) + 1, dify.index(min(dify)) + 1, "G"])
                         obj = cv2.polylines(obj, [np.array([[x + w // 2, y + h // 2]], np.int32)], True, (0, 255, 0),
                                             thickness=15)
                     else:
+                        difx = [abs(num - x) for num in Xs]
+                        dify = [abs(num - y) for num in Ys]
+                        items.append([difx.index(min(difx)) + 1, dify.index(min(dify)) + 1, "B"])
                         obj = cv2.polylines(obj, [np.array([[x + w // 2, y + h // 2]], np.int32)], True, (255, 0, 0),
                                             thickness=15)
 
@@ -89,6 +105,9 @@ while True:
                 points = np.array([[x, y], [x + w, y], [x + w, y + h], [x, y + h]], np.int32)
                 obj = cv2.polylines(obj, [points], True, (0, 0, 255), thickness=2)
 
+        items.sort()
+        for i in items: print(i)
+        print("-------------------------")
         cv2.imshow("Mask", obj)
     cv2.imshow("ORG Image", image)
 

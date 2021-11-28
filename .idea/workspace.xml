@@ -17,6 +17,7 @@
   <component name="ChangeListManager">
     <list default="true" id="99892c18-2440-46d9-8186-6459d9910b33" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/Final Block/Final Block.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Final Block/Final Block.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +97,10 @@
       <workItem from="1638000982899" duration="505000" />
       <workItem from="1638001718047" duration="1603000" />
       <workItem from="1638004048874" duration="97000" />
+      <workItem from="1638044108021" duration="2924000" />
+      <workItem from="1638098002068" duration="2181000" />
+      <workItem from="1638101206554" duration="2155000" />
+      <workItem from="1638109821140" duration="41000" />
     </task>
     <servers />
   </component>
@@ -159,6 +164,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="723" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1638003480251" />
+    <state x="803" y="414" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1638102104597">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="803" y="414" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1638102104597" />
     <state x="184" y="87" key="DiffContextDialog" timestamp="1638003194428">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -167,28 +176,28 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1637944553253" />
-    <state width="1875" height="284" key="GridCell.Tab.0.bottom" timestamp="1638000852181">
+    <state width="1875" height="244" key="GridCell.Tab.0.bottom" timestamp="1638103383445">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1875" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1638000852181" />
-    <state width="1875" height="284" key="GridCell.Tab.0.center" timestamp="1638000852181">
+    <state width="1875" height="244" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1638103383445" />
+    <state width="1875" height="244" key="GridCell.Tab.0.center" timestamp="1638103383445">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1875" height="284" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1638000852181" />
-    <state width="1875" height="284" key="GridCell.Tab.0.left" timestamp="1638000852181">
+    <state width="1875" height="244" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1638103383445" />
+    <state width="1875" height="244" key="GridCell.Tab.0.left" timestamp="1638103383445">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1875" height="284" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1638000852181" />
-    <state width="1875" height="284" key="GridCell.Tab.0.right" timestamp="1638000852181">
+    <state width="1875" height="244" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1638103383445" />
+    <state width="1875" height="244" key="GridCell.Tab.0.right" timestamp="1638103383445">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1875" height="284" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1638000852181" />
+    <state width="1875" height="244" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1638103383445" />
     <state x="631" y="204" key="RollbackChangesDialog" timestamp="1638003195529">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="631" y="204" key="RollbackChangesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1638003195529" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Final_Block$Final_Block.coverage" NAME="Final Block Coverage Results" MODIFIED="1638000759659" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/Final Block" />
+    <SUITE FILE_PATH="coverage/Final_Block$Final_Block.coverage" NAME="Final Block Coverage Results" MODIFIED="1638103021323" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/Final Block" />
   </component>
 </project>
