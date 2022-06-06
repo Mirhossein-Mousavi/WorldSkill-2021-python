@@ -9,11 +9,13 @@
 <div align="center">
 <img src="https://github.com/Mirhossein-Mousavi/WorldSkill-2021-python/blob/master/pictures/Example%20table.png?raw=true" align="center" style="width: 35%" style="height: 35%" />
 </div>  
-<br>
+
+
+* This code must recognize the difference between the background color and the blocks to run. In this program, it can be detected by clicking on the background color, but this process can be automated with very minor changes.
 
 ### Screenshot :
 
-In this project, a program written under Windows connects to an industrial device and displays sensors on several charts for analysis. 
+In the image below, you can see the program running
 
 <div align="center">
 <img src="https://github.com/Mirhossein-Mousavi/WorldSkill-2021-python/blob/aef153b8ee4c1d0635cba7e4f2d09f840aa096e5/pictures/Screenshot.png?raw=true" align="center" style="width: 100%" style="height: 50%" />
