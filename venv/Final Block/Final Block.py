@@ -3,12 +3,9 @@ import numpy as np
 import imutils as imu
 
 # ---------------------------------------------------------------------
-
 lower = None
 upper = None
 isfirst = True
-
-
 # ---------------------------------------------------------------------
 def Brush(event, x, y, flags, param):
     global lower, upper
@@ -17,7 +14,7 @@ def Brush(event, x, y, flags, param):
         print(f"Color:    {image[y, x]} ")
         print("---------------------------")
 
-        lower=(150,150,150)
+        lower=(90,90,90)
         upper=(255,255,255)
 
         if lower is not None:
@@ -54,8 +51,8 @@ cam = cv2.VideoCapture(0)
 while True:
 
     _, image = cam.read()
-    image = cv2.medianBlur(image, 9)
-    # image = imu.resize(image,300,400)
+    image = cv2.medianBlur(image, 5)
+    # image = imu.resize(image,400,400)
 
     if lower is not None:
         mask = cv2.inRange(image, lower, upper)
@@ -115,5 +112,5 @@ while True:
         cv2.setMouseCallback("ORG Image", Brush)
         isfirst = False
 
-    if 27 == cv2.waitKey(5):
+    if 27 == cv2.waitKey(1):
         break
