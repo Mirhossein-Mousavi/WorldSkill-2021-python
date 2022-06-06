@@ -1,11 +1,13 @@
 import cv2
-import numpy as np
 import imutils as imu
+import numpy as np
 
 # ---------------------------------------------------------------------
 lower = None
 upper = None
 isfirst = True
+
+
 # ---------------------------------------------------------------------
 def Brush(event, x, y, flags, param):
     global lower, upper
@@ -14,8 +16,8 @@ def Brush(event, x, y, flags, param):
         print(f"Color:    {image[y, x]} ")
         print("---------------------------")
 
-        lower=(90,90,90)
-        upper=(255,255,255)
+        lower = (90, 90, 90)
+        upper = (255, 255, 255)
 
         if lower is not None:
             b, g, r = lower
@@ -27,7 +29,6 @@ def Brush(event, x, y, flags, param):
             if r1 < r:
                 r = r1
             lower = np.array([b, g, r])
-
 
             b, g, r = upper
             b1, g1, r1 = image[y, x]
@@ -64,10 +65,7 @@ while True:
         gray = cv2.cvtColor(obj, cv2.COLOR_BGR2GRAY)
         cnts = cv2.findContours(gray, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
         cnts = cnts[0] if len(cnts) == 2 else cnts[1]
-        mylist = []
-        Xs = []
-        Ys = []
-        items = []
+        mylist, Xs, Ys, items = [], [], [], []
         for c in list(cnts):
             x, y, w, h = cv2.boundingRect(c)
             if h < 25 or w < 25: continue
@@ -103,7 +101,7 @@ while True:
                 obj = cv2.polylines(obj, [points], True, (0, 0, 255), thickness=2)
 
         items.sort()
-        for i in items: print(i)
+        print(*items)
         print("-------------------------")
         cv2.imshow("Mask", obj)
     cv2.imshow("ORG Image", image)
