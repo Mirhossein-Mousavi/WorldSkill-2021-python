@@ -9,6 +9,7 @@
 <div align="center">
 <img src="https://github.com/Mirhossein-Mousavi/WorldSkill-2021-python/blob/master/pictures/Example%20table.png?raw=true" align="center" style="width: 35%" style="height: 35%" />
 </div>  
+<br>
 
 
 * This code must recognize the difference between the background color and the blocks to run. In this program, it can be detected by clicking on the background color, but this process can be automated with very minor changes.
